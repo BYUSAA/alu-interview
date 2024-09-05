@@ -43,7 +43,7 @@ Clone the repository:
 
 bash
 Copy code
-git clone https://github.com/BYUUSSAA/alu-interview.git
+git clone https://github.com/BYUSAA/alu-interview.git
 Navigate to the project directory:
 
 bash
