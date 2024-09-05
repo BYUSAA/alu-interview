@@ -5,7 +5,7 @@ def minOperations(n):
     divisor = 2
     
     while n > 1:
-        # Checking if the current divisor divides n perfectly
+        # Checking if current divisor divides n perfectly
         while n % divisor == 0:
             operations += divisor
             n //= divisor
