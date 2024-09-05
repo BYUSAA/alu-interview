@@ -1,17 +1,14 @@
-#!/usr/bin/python3
-""" Minimum Operations"""
-
-
 def minOperations(n):
-    """ Minimum Operations"""
     if n <= 1:
         return 0
-    i = 2
-    result = 0
-    while i <= n:
-        if n % i == 0:
-            result += i
-            n = n / i
-        else:
-            i += 1
-    return result
+    operations = 0
+    divisor = 2
+    
+    while n > 1:
+        # Checking if the current divisor divides n perfectly
+        while n % divisor == 0:
+            operations += divisor
+            n //= divisor
+        divisor += 1
+        
+    return operations
