@@ -1,1 +1,1 @@
-Minoperation
+Minimum operation
