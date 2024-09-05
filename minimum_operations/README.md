@@ -1,14 +1,14 @@
-Minimum operation
+
 Minimum Operations
 Description
 This project focuses on solving the problem of calculating the fewest number of operations needed to result in exactly n 'H' characters in a text editor file. The allowed operations are:
 
 Copy All: Copies all the 'H' characters in the file.
-Paste: Pastes the copied characters.
+Paste: Paste the copied characters.
 Given a number n, the goal is to find the minimum number of operations required to achieve exactly n characters.
 
 Prototype
-python
+Python
 Copy code
 def minOperations(n)
 Parameters
