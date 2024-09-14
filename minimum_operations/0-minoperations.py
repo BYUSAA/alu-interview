@@ -3,6 +3,7 @@
 Minimum operations to reach n characters
 """
 
+
 def minOperations(n):
     """
     Calculates the minimum operations to reach n characters
@@ -26,5 +27,4 @@ def minOperations(n):
             operations += divisor
         else:
             divisor += 1
-            
     return operations
