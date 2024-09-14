@@ -4,7 +4,6 @@ Minimum operations to reach n characters
 """
 
 def minOperations(n):
-    
     """
     Calculates the minimum operations to reach n characters
 
