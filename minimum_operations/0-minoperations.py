@@ -1,35 +1,30 @@
 #!/usr/bin/python3
+"""
+Minimum operations to reach n characters
+"""
 
-"""
-This module provides a function that calculates the minimum number of 
-operations needed to achieve exactly n 'H' characters in a file, 
-using Copy All and Paste.
-"""
 
 def minOperations(n):
     """
-    Calculates the minimum number of operations to get exactly n 'H' 
-    characters.
+    Calculates the minimum operations to reach n characters
 
     Args:
-        n (int): The number of 'H' characters to achieve.
+        n (int): The number of characters to reach
 
     Returns:
-        int: The fewest number of operations required, or 0 if it's 
-        impossible.
+        int: The minimum operations to reach n characters
     """
-    # Impossible cases: when n is 0 or negative
+    # Edge cases [0, 1]
     if n <= 1:
         return 0
 
     operations = 0
     divisor = 2
 
-    # Iteratively reduce n by its factors, counting operations
     while n > 1:
-        while n % divisor == 0:
+        if n % divisor == 0:
+            n = n // divisor
             operations += divisor
-            n //= divisor
-        divisor += 1
-
+        else:
+            divisor += 1
     return operations
