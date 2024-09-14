@@ -1,20 +1,20 @@
-#!/usr/bin/env python3
+#!/usr/bin/python3
 
 """
-Calculate the minimum number of operations to reach exactly 'n' characters.
+Minimum operations to reach n characters
 """
 
-def min_operations(n):
+def minOperations(n):
     """
-    Determines the minimum number of operations required to reach 'n' characters.
+    Calculates the minimum operations to reach n characters
 
     Args:
-        n (int): The target number of characters.
+        n (int): The number of characters to reach
 
     Returns:
-        int: The minimum number of operations needed.
+        int: The minimum operations to reach n characters
     """
-    # Handle edge cases for small n values
+    # Edge cases [0, 1]
     if n <= 1:
         return 0
 
@@ -22,9 +22,10 @@ def min_operations(n):
     divisor = 2
 
     while n > 1:
-        while n % divisor == 0:
-            n //= divisor
+        if n % divisor == 0:
+            n = n // divisor
             operations += divisor
-        divisor += 1
-        
+        else:
+            divisor += 1
+
     return operations
